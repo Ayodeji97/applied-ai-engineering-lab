@@ -26,3 +26,20 @@ def calculate_balance(order: Order) -> Number:
         raise ValueError("deposit must not be greater than price")
 
     return price - deposit
+
+
+def format_order(order: Order) -> str:
+    """Return a six-line order summary without printing or modifying the input."""
+    # TODO(Daniel): Implement checkpoint 1.2 after reading the requirements and tests.
+    status = order["status"]
+    if not isinstance(status, str):
+        raise ValueError("status must be a string")
+
+    return (
+        f"Customer: {order['customer_name']}\n"
+        f"Garment: {order['garment']}\n"
+        f"Price: ₦{order['price']:,}\n"
+        f"Deposit: ₦{order['deposit']:,}\n"
+        f"Balance: ₦{calculate_balance(order):,}\n"
+        f"Status: {status.capitalize()}"
+    )
