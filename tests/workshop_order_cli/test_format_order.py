@@ -71,3 +71,10 @@ def test_does_not_call_print() -> None:
         format_order(sample_order())
 
     print_mock.assert_not_called()
+
+
+def test_all_uppercase_letters_of_status() -> None:
+    order = sample_order()
+    order["status"] = "READY"
+
+    assert format_order(order).splitlines()[-1] == "Status: Ready"

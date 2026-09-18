@@ -30,7 +30,7 @@ def calculate_balance(order: Order) -> Number:
 
 def format_order(order: Order) -> str:
     """Return a six-line order summary without printing or modifying the input."""
-    # TODO(Daniel): Implement checkpoint 1.2 after reading the requirements and tests.
+
     status = order["status"]
     if not isinstance(status, str):
         raise ValueError("status must be a string")
