@@ -1,0 +1,27 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run current tests",
+      "type": "shell",
+      "command": "uv run pytest",
+      "group": {"kind": "test", "isDefault": true},
+      "problemMatcher": []
+    },
+    {
+      "label": "Run Workshop Order CLI",
+      "type": "shell",
+      "command": "uv run python -m labs.workshop_order_cli.main",
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "Check formatting and types",
+      "type": "shell",
+      "command": "uv run ruff check . && uv run pyright",
+      "group": "build",
+      "problemMatcher": []
+    }
+  ]
+}
+

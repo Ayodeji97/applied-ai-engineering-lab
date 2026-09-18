@@ -1,0 +1,2 @@
+"""Workshop Order CLI lab."""
+
