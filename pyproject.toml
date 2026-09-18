@@ -24,6 +24,3 @@ select = ["E", "F", "I", "B", "UP", "SIM"]
 pythonVersion = "3.12"
 typeCheckingMode = "strict"
 include = ["src", "tests"]
-
-[tool.mypy]
-mypy_path = "$MYPY_CONFIG_FILE_DIR/src"
