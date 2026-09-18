@@ -73,7 +73,7 @@ def test_does_not_call_print() -> None:
     print_mock.assert_not_called()
 
 
-def test_all_uppercase_letters_of_status() -> None:
+def test_normalizes_uppercase_status() -> None:
     order = sample_order()
     order["status"] = "READY"
 
