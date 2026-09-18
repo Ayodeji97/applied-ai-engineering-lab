@@ -2,9 +2,9 @@ from typing import Any, cast
 
 import pytest
 
-pytest = cast(Any, pytest)
-
 from labs.workshop_order_cli.order import calculate_balance
+
+pytest = cast(Any, pytest)
 
 
 def test_calculates_outstanding_balance() -> None:

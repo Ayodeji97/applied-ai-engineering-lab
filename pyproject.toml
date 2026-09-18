@@ -6,12 +6,7 @@ requires-python = ">=3.12"
 dependencies = []
 
 [dependency-groups]
-dev = [
-    "pytest>=8.3,<9",
-    "pytest-cov>=6,<7",
-    "pyright>=1.1,<2",
-    "ruff>=0.11,<1",
-]
+dev = ["pytest>=8.3,<9", "pytest-cov>=6,<7", "pyright>=1.1,<2", "ruff>=0.11,<1"]
 
 [tool.pytest.ini_options]
 pythonpath = ["src"]
@@ -30,3 +25,5 @@ pythonVersion = "3.12"
 typeCheckingMode = "strict"
 include = ["src", "tests"]
 
+[tool.mypy]
+mypy_path = "$MYPY_CONFIG_FILE_DIR/src"

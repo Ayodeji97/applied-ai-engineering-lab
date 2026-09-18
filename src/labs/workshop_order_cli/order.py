@@ -1,7 +1,7 @@
-from typing import TypeAlias
+from collections.abc import Mapping
 
-Number: TypeAlias = int | float
-Order: TypeAlias = dict[str, str | Number]
+type Number = int | float
+type Order = Mapping[str, str | Number]
 
 
 def calculate_balance(order: Order) -> Number:
